@@ -69,7 +69,9 @@ public class LearningCurve : MonoBehaviour
         Debug.Log("Player KO'd...");
     }
 
-    public void FindPartyMember()
+    public void FindPartyMember() //start from here for assignment
+        //imput parameter 1 should be your own name, input parameter 2 should be the list where you want to be added
+        // call this method from Start(), and print the whole list of players, you included
     {
         List<string> QuestPartyMembers = new List<string>()
         {
@@ -78,6 +80,8 @@ public class LearningCurve : MonoBehaviour
             "Sterling the Knight"
         };
         Debug.LogFormat("Party Members: {0}", QuestPartyMembers.Count);
+
+        QuestPartyMembers.Insert(2, "Clara Marie Pedersen");
 
         for(int i = 0; i < QuestPartyMembers.Count; i++)
         {
